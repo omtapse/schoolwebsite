@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>रावसाहेब जगताप कर्णबधिर विद्यालय - तुळजापूर</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Mangal', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #FF9933 0%, #FFFFFF 50%, #138808 100%);
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .school-logo {
+            background: white;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #d32f2f;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #2c3e50;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav ul li {
+            margin: 5px 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #34495e;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #d32f2f;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FF9933;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #138808;
+        }
+
+        .about-highlights h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .about-highlights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about-highlights ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .about-highlights ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #138808;
+            font-weight: bold;
+        }
+
+        /* Photo Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Ambedkar Jayanti Section */
+        .jayanti-info {
+            background: linear-gradient(to right, #e3f2fd, #fff);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #1565c0;
+            margin-top: 20px;
+        }
+
+        .jayanti-info h3 {
+            color: #1565c0;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item .icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #d32f2f;
+        }
+
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: #FF9933;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="school-logo">📚</div>
+            <h1>रावसाहेब जगताप कर्णबधिर विद्यालय</h1>
+            <p class="subtitle">हडको तुळजापूर, ता. तुळजापूर, जिल्हा धाराशिव</p>
+            <p class="tagline">शिक्षण निदान व शिक्षण उपचार केंद्र</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">आमच्याबद्दल</a></li>
+            <li><a href="#photos">फोटो गॅलरी</a></li>
+            <li><a href="#events">कार्यक्रम</a></li>
+            <li><a href="#contact">संपर्क</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>आमच्या विद्यालयाबद्दल</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>रावसाहेब जगताप कर्णबधिर विद्यालय हे तुळजापूर, धाराशिव येथे स्थित एक विशेष विद्यालय आहे. आमचे विद्यालय कर्णबधिर मुलांसाठी दर्जेदार शिक्षण प्रदान करते.</p>
+                    <br>
+                    <p>आम्ही प्रत्येक मुलाच्या व्यक्तिमत्त्व विकासावर भर देतो आणि त्यांना समाजात सक्षम नागरिक बनण्यासाठी आवश्यक ते सर्व कौशल्य शिकवतो. आमचे प्रशिक्षित शिक्षक आणि आधुनिक शिक्षण पद्धती मुलांना उज्ज्वल भविष्य घडवण्यात मदत करतात.</p>
+                </div>
+                <div class="about-highlights">
+                    <h3>आमच्या विशेषता</h3>
+                    <ul>
+                        <li>विशेष प्रशिक्षित शिक्षक</li>
+                        <li>वैयक्तिक लक्ष</li>
+                        <li>आधुनिक शिक्षण साधने</li>
+                        <li>सांकेतिक भाषा प्रशिक्षण</li>
+                        <li>शिक्षण निदान सेवा</li>
+                        <li>शिक्षण उपचार केंद्र</li>
+                        <li>सामाजिक कौशल्य विकास</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="photos">
+            <h2>फोटो गॅलरी</h2>
+            <p>आमच्या विद्यालयातील विविध उपक्रम आणि कार्यक्रम</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/public/varga.jpeg" alt="वर्गातील विद्यार्थी">
+                    <div class="gallery-caption">वर्गातील विद्यार्थी</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/public/kridaspardha.jpeg" alt="मैदानावरील क्रीडा स्पर्धा">
+                    <div class="gallery-caption">मैदानावरील क्रीडा स्पर्धा</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/public/WhatsApp Image 2026-02-13 at 12.33.53 (2).jpeg" alt="शैक्षणिक कार्यक्रम">
+                    <div class="gallery-caption">शैक्षणिक कार्यक्रम</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/public/WhatsApp Image 2026-02-13 at 12.33.53 (2).jpeg" alt="गांधी जयंती साजरी जयंती साजरी">
+                    <div class="gallery-caption">गांधी जयंती साजरी</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/public/WhatsApp Image 2026-02-13 at 12.33.54 (1).jpeg" alt="सामूहिक फोटो">
+                    <div class="gallery-caption">सामूहिक फोटो</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/public/schooloutdoor.jpeg" alt="शाळेचे बाह्य दृश्य">
+                    <div class="gallery-caption">शाळेचे बाह्य दृश्य</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events">
+            <h2>कार्यक्रम आणि उपक्रम</h2>
+            <!-- <div class="jayanti-info">
+                <h3>📅 डॉ. बाबासाहेब आंबेडकर जयंती साजरी</h3>
+                <p>आमच्या विद्यालयात दरवर्षी डॉ. बाबासाहेब आंबेडकर जयंती अतिशय उत्साहात साजरी केली जाते. विद्यार्थी, शिक्षक आणि पालक मिळून या कार्यक्रमात सहभागी होतात. बाबासाहेबांच्या विचारांना आत्मसात करून समाजात समानता आणि न्याय प्रस्थापित करण्याचा संदेश दिला जातो.</p>
+            </div> -->
+            <br>
+            <div class="jayanti-info" style="border-left-color: #FF9933;">
+                <h3>🎓 इतर कार्यक्रम</h3>
+                <ul style="padding-left: 20px; line-height: 2;">
+                    <li>स्वातंत्र्य दिन साजरा</li>
+                    <li>प्रजासत्ताक दिन साजरा</li>
+                    <li>शिक्षक दिन</li>
+                    <li>क्रीडा स्पर्धा</li>
+                    <li>वार्षिक सांस्कृतिक कार्यक्रम</li>
+                    <li>पालक-शिक्षक बैठका</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>संपर्क माहिती</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>पत्ता:</strong><br>
+                            रावसाहेब जगताप कर्णबधिर विद्यालय<br>
+                            हडको तुळजापूर<br>
+                            तालुका: तुळजापूर<br>
+                            जिल्हा: धाराशिव, महाराष्ट्र
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <strong>संपर्क क्रमांक:</strong><br>
+                            <a href="tel:9637773837" style="color: #d32f2f; text-decoration: none;">9637773837</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">🕐</span>
+                        <div>
+                            <strong>शाळेचा वेळ:</strong><br>
+                            सकाळी ९:०० ते दुपारी ४:०० वाजेपर्यंत<br>
+                            (सोमवार ते शुक्रवार)
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.234567890123!2d76.0!3d18.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDAwJzAwLjAiTiA3NsKwMDAnMDAuMCJF!5e0!3m2!1smr!2sin!4v1234567890123!5m2!1smr!2sin" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; २०२६ रावसाहेब जगताप कर्णबधिर विद्यालय, तुळजापूर</p>
+        <p>सर्व हक्क राखीव | शिक्षण प्रत्येकाचा हक्क आहे</p>
+        <div class="footer-links">
+            <a href="tel:9637773837">📞 आम्हाला कॉल करा</a> | 
+            <a href="#about">आमच्याबद्दल</a> | 
+            <a href="#contact">संपर्क</a>
+        </div>
+    </footer>
+
+</body>
+</html>
